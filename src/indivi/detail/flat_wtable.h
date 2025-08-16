@@ -284,7 +284,7 @@ private:
   using storage_type = typename std::aligned_storage<sizeof(item_type), alignof(item_type)>::type;
   using mixer = typename std::conditional<hash_is_avalanching<Hash>::value, no_mix, bit_mix>::type;
 
-  static constexpr float MAX_LOAD_FACTOR{ 0.8f };
+  static constexpr float MAX_LOAD_FACTOR{ 0.875f };
   static constexpr unsigned int MIN_CAPA{ 2u };
   static constexpr size_type EMPTY_SHIFT{ sizeof(size_type) * CHAR_BIT - 1u };
 
